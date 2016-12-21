@@ -1,0 +1,33 @@
+
+/* Color Palette */
+
+$white           : #FFF;
+$gray            : #777;
+$light-gray      : #7F8C8C;
+$dark-gray       : #3F4646;
+$turquoise       : #76C7C0;
+$darker-turquoise: #62A29E;
+$dark-turquoise  : #528B86;
+$red             : #E8645A;
+$dark-red        : #E2534B;
+$light-blue      : #76CACA;
+
+
+$header-bg       : $turquoise;
+$footer-bg       : $turquoise;
+$button-color    : $turquoise;
+$primary-color   : $white;
+$secondary-color : $gray;
+$icon-color      : #62BDBD;
+$icon-color-hover: $dark-red;
+$bt-border-color : #62B9B0;
+$bt-border-color-hover: $dark-red;
+
+/* Font Variables */
+
+$open-sans : 'Open Sans', Verdana, Arial;
+
+
+@mixin padding($padding) {
+  padding: $padding;
+}

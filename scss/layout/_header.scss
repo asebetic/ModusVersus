@@ -1,0 +1,192 @@
+
+header {
+	@include padding(0 10px);
+	position: relative;
+	line-height: 80px;
+	background: url('../img/bg-img.png') 0 84px repeat-x, $header-bg;
+	color: $white;
+	text-align: center;
+	.fa {
+		float: right;
+		color: $white;
+		font-size: 35px;
+		padding-top: 25px; 
+		cursor: pointer;
+		@media only screen and (min-width:710px) {
+			display: none;
+		}
+	}
+}
+
+.logo {
+	position: relative;
+	z-index: 100;
+	text-align: left;
+	font-weight: 800;
+	font-size: 30px;
+	background-color: $header-bg;
+	span {
+		font-weight: normal;
+		font-size: 25px;
+	}
+	@media only screen and (min-width:1000px) {
+		width: 20%;
+	}
+}
+
+.prim-nav {
+	position: absolute;
+	transform: translate(0, -150%);
+	transition: all .5s ease;
+	z-index: 10;
+	padding-bottom: 20px;
+	margin-left: -20px;
+	background-color: $header-bg;
+	@media only screen and (min-width:710px) {
+		transform: translate(0, 0)!important;
+		transition: none;
+		display: block;
+		padding-left: 20px;
+		padding-bottom: 0;
+	}
+	@media only screen and (min-width:1000px) {
+		position: relative;
+		width: 80%;
+		height: 81px;
+		float: right;
+	}
+	nav {
+		@media only screen and (min-width:1000px) {
+			float: right;
+			margin-right: 50px;
+		}
+	}
+}
+
+nav ul {
+	li {
+		position: relative;
+		text-align: center;
+		height: 50px;
+		line-height: 50px;
+		@media only screen and (min-width:710px) {
+			display: inline-block;
+			float: left;
+			background-color: inherit;
+			height: 80px;
+			line-height: 80px;
+			margin-right: 10px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+	a {
+		@include padding(8px 14px);
+		border-radius: 5px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 500;
+		transition: all .2s ease;
+		&:hover {
+			color: $light-gray;
+			transition: all .2s ease;
+		}
+		&.active {
+			background-color: $darker-turquoise;
+		}
+		@media only screen and (min-width:710px) {
+			font-size: 13px;
+			&:hover {
+				background-color: $red;
+				color: $white;
+				box-shadow: 0 3px $dark-red;
+			}
+			&.active {
+				background-color: $darker-turquoise;
+				box-shadow: 0 3px $dark-turquoise;
+			}
+		}
+	}
+}
+
+
+.search {
+	@media only screen and (min-width:710px) {
+		float: right;
+		width: 20%;
+		text-align: right;
+		padding-right: 20px;
+	}
+	@media only screen and (min-width:1000px) {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		height: 81px;
+	}
+}
+
+.search button {
+	display: none;
+	width: 25px;
+	height: 25px;
+	border-bottom: none;
+	background: url('../img/icons.png') no-repeat 3px 1px;
+	cursor: pointer;
+	color: #ddd;
+	&:hover {
+		background-color: $red;
+		border-radius: 5px;
+		border-bottom: 3px solid $dark-red;
+	}
+	@media only screen and (min-width:1000px) {
+		display: inline-block;
+		margin: 30px 0;
+	}	
+}
+
+button.active {
+	background-color: $red;
+	border-radius: 5px;
+	border-bottom: 3px solid $dark-red;
+}
+
+#search {
+	@include padding(10px);
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	color: $white;
+	background: rgba(27, 27, 27, 0.5);
+	@media only screen and (min-width:710px) {
+		width: 100%;
+	}
+	@media only screen and (min-width:1000px) {
+		display: none;
+		position: relative;
+		top: -30px;
+		width: 200px;
+		right: 30px;
+		background: #585858;
+		border-radius: 0 0 5px 5px;
+	}
+}
+
+.header-bg {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	z-index: 100;
+	background: url("../img/bg-img.png") 0 -61px repeat-x, #76C7C0;
+	@media only screen and (min-width:710px) {
+		display: block;
+		bottom: -80px;
+	}
+	@media only screen and (min-width:1000px) {
+		bottom: 0;
+	}
+}

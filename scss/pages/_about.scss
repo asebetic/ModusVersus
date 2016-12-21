@@ -1,0 +1,115 @@
+.page-about {
+	min-height: auto;
+	h2 {
+		color: #E1524B;
+		margin-bottom: 20px;
+	}
+	p {
+		line-height: 20px;
+		text-align: left;
+		@media only screen and (min-width:700px) {
+			margin-bottom: 50px;
+		}
+	}
+	.clients {
+		margin-top: 50px;
+	}
+	@media only screen and (min-width:1000px) {
+		height: 1660px;
+	}
+}
+.clients-title {
+	h3 {
+		text-align: left;
+	}
+}
+.about {
+	@include padding(10px 0);
+	height: 800px;
+	@media only screen and (min-width:700px) {
+		@include padding(50px 10px);
+		height: 750px;
+	}
+	@media only screen and (min-width:1000px) {
+		height: 600px;
+	}
+	h2 {
+		margin: 0 0 25px 5px;
+		color: #E1524B;
+		text-align: left;
+	}
+	.col-6 > p {
+		text-align: left;
+		margin-bottom: 0;
+	}
+}
+.team {
+	@include padding(70px 0);
+	position: relative;
+	display: none;
+	height: 600px;
+	.col-3 {
+		@extend %col-3;
+		@include padding(20px);
+		max-width: 270px;
+		cursor: pointer;
+		background: url('https://placeholdit.imgix.net/~text?txtsize=33&txt=270%C3%97310&w=270&h=310');
+		&:hover {
+			background: #90D1CB;
+			& .hide {
+				visibility: visible;
+				transition: visibility .5s ease-in;
+			}
+		}
+		p {
+			font: italic 13px/26px 'Open Sans';
+			color: $white;
+			text-align: left;
+		}
+	}
+	@media only screen and (min-width:1000px) {
+		display: block;
+	}
+}
+.team-button {
+	@extend %button;
+	width: 80%;
+	position: absolute;
+	bottom: -25px;
+	left: 10%;
+	background-color: #9BA3A3;
+	box-shadow: 0 4px $light-gray;
+}
+.team-heading {
+	margin-bottom: 65px;
+	color: $light-gray;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.slick-slider {
+	margin-top: 50px;
+}
+
+.title {
+	height: 80px;
+	line-height: 80px;
+	padding-left: 10px;
+	background-color: #ECECEC;
+	color: $light-gray;
+	h1 {
+		float: left;
+		font-size: 20px;
+		font-weight: 600;
+	}
+	span {
+		font-size: 12px;
+		float: right;
+		a {
+			color: $gray;
+		}
+	}
+	@media only screen and (min-width:710px) and (max-width: 1000px) {
+		margin-top: 80px;
+	}
+}

@@ -1,0 +1,130 @@
+.single {
+	height: 3450px;
+	.blog-list {
+		position: relative;
+	}
+	h2,
+	.info {
+		@media only screen and (min-width:600px) { 
+			margin-left: 100px;
+		}
+	}
+	h2 {
+		font-size: 24px;
+	}
+	.blog-info {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@media only screen and (min-width:600px) {
+			display: block;
+		}
+	}
+	.slider {
+		height: 100%;
+	}
+	.form-container {
+		margin-top: 0;
+		h4 {
+			margin: 40px 0;
+		}
+	}
+	input,
+	textarea {
+		@media only screen and (min-width:600px) {
+			width: 80%;
+	    }
+	}
+	@media only screen and (min-width:350px) {
+		height: 3250px;
+	}
+	@media only screen and (min-width:450px) {
+		height: 3000px;
+	}
+	@media only screen and (min-width:600px) {
+		height: 2700px;
+	}
+}
+
+p.quote {
+	@include padding(0 30px);
+	border-left: 5px solid $light-gray;
+	@media only screen and (min-width:1000px) {
+		margin: 45px 0 45px 70px;
+	}
+}
+
+.share {
+	@include padding(14px);
+	display: inline-table;
+	height: 70px;
+	margin-bottom: 20px;
+	background-color: #ECECEC;
+	text-align: left;
+	span {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.fa {
+		@include padding(10px 9px);
+		float: right;
+		width: 40px;
+		height: 40px;
+		margin-left: 5px;
+		font-size: 25px;
+		color: $white;
+		border-radius: 5px;
+		cursor: pointer;
+		@media only screen and (min-width:1000px) {
+			margin-left: 8px;
+		}
+	}
+}
+
+.fa-facebook {
+	margin-left: 10px;
+	background-color: #526DA3; 
+}
+.fa-twitter {
+	background-color: #73BFE5;
+}
+.fa-google-plus {
+	background-color: $dark-red;
+}
+.fa-linkedin {
+	background-color: #527AA3;
+}
+
+.comment {
+	position: relative;
+	.fa {
+		@include padding(20px 22px);
+		position: relative;
+		top: 30px;
+		font-size: 32px;
+		color: $white;
+		background-color: $light-gray;
+		border-radius: 5px;
+	}
+	h3 {
+		display: inline-block;
+		margin: 0 10px 0 10px;
+	}
+	span {
+		font-size: 14px;
+	}
+}
+
+.comment-text {
+	@include padding(15px 0 20px 40px);
+	margin-top: 0;
+	margin-left: 40px;
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 3px 1px #ddd;
+}
+
+.reply {
+	margin-left: 40px;
+}

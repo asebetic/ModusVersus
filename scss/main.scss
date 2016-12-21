@@ -1,0 +1,61 @@
+@import 'layout/reset';
+@import 'layout/grid';
+@import 'helpers/variables';
+@import 'helpers/placeholders';
+@import 'layout/header';
+@import 'layout/home-content';
+@import 'layout/footer';
+@import 'pages/about.scss';
+@import 'pages/contact.scss';
+@import 'pages/services.scss';
+@import 'pages/portfolio.scss';
+@import 'pages/single-project.scss';
+@import 'pages/blog-listing.scss';
+@import 'pages/blog-single.scss';
+
+body {
+	overflow-x: hidden;
+	background-color: #F3F3F3;
+	font-family: $open-sans;
+	color: $primary-color;
+}
+
+main {
+	min-height: 3100px;
+	@media only screen and (min-width:700px) {
+		min-height: 1660px;
+	}
+	@media only screen and (min-width:900px) {
+		min-height: 2400px;
+	}
+	@media only screen and (min-width:1200px) {
+		min-height: 2200px;
+	}
+}
+
+.content {
+	@include padding(0 10px);
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	@media only screen and (min-width:1000px) {
+		@include padding(0);
+	}
+}
+
+small {
+	text-align: left;
+	font-size: 12px;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+}
+
+button,
+input {
+	border: none;
+	outline: none;
+}

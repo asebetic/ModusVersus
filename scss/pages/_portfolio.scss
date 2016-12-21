@@ -1,0 +1,149 @@
+.portfolio-page {
+	min-height: auto;
+	.content {
+		@include padding(0 10px);
+	}
+	.col-6 {
+		@include padding(0);
+		max-width: 570px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		margin-bottom: 25px;
+		text-align: left;
+		line-height: 20px;
+	}
+	img {
+		max-width: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	h4 {
+		margin-bottom: 15px;
+	}
+	a {
+		span {
+			margin-left: 20px;
+			color: $light-gray;
+			font-weight: 600;
+		}
+	}
+	a:hover > span {
+		color: $red;
+	}	
+	a:hover > i {
+		background-color: $red;
+	}
+	.fa-link {
+		@include padding(8px);
+		width: 40px;
+		height: 40px;
+		font-size: 25px;
+		background-color: $dark-turquoise;
+		color: $white;
+		border-radius: 5px;
+	}
+	@media only screen and (min-width:1000px) {
+		img {
+			height: 270px;
+		}
+		.right {
+			margin-right: 0;
+			padding-left: 15px;
+		}
+		.col-6 {
+			height: 270px;
+			margin-bottom: 35px;
+		}
+		h4 {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.portfolio-nav {
+	line-height: 50px;
+	margin: 10px 0;
+	button {
+		@extend %button;
+		@include padding(10px 12px);
+		width: auto;
+		height: 35px;
+		margin-right: 5px;
+		background-color: #9BA3A3;
+		box-shadow: 0 3px $light-gray;
+		&:hover {
+			background-color: $darker-turquoise;
+			box-shadow: 0 3px $dark-turquoise;
+		}
+	}
+	@media only screen and (min-width:1000px) {
+		margin: 0;
+		text-align: left;
+		height: 110px;
+		line-height: 110px;
+		button {
+			margin-right: 15px;
+		}
+	}
+}
+
+.link {
+	@media only screen and (min-width:1000px) {
+		position: relative;
+		bottom: -50px;
+	}
+}
+
+.btn-details {
+	@extend %button;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	margin: 10px 0;
+	background-color: $light-blue;
+	box-shadow: 0 4px $icon-color;
+	&:hover {
+		background-color: $red;
+		box-shadow: 0 3px $dark-red;
+	}
+	@media only screen and (min-width:460px) {
+		float: right;
+		margin: 0;
+	}
+	@media only screen and (min-width:1000px) {
+		float: right;
+	}
+}
+
+.page-nav {
+	@include padding(30px 0);
+	line-height: 50px;
+	margin-bottom: 40px;
+	button {
+		@extend %button;
+		width: 40px;
+		height: 40px;
+		margin-right: 10px;
+		font-size: 16px;
+		font-weight: 900;
+		background-color: #9BA3A3;
+		box-shadow: 0 3px $light-gray;
+		&:hover {
+			background-color: $red;
+			box-shadow: 0 3px $dark-red;
+		}
+	}
+	.fa {
+		@include padding(0);
+		font-size: 16px;
+		color: $white;
+	}
+}
+
+button.active-page {
+	background-color: #649792;
+	box-shadow: 0 3px $dark-turquoise;
+}

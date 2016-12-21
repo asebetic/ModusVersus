@@ -1,0 +1,123 @@
+.single-page {
+	min-height: auto;
+	.content {
+		@include padding(0 10px);
+	}
+	p {
+		text-align: left;
+	}
+	h3 {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	section {
+		margin-bottom: 50px;
+		min-height: 250px;
+	}
+	.clients {
+		margin-top: 50px;
+		.fa {
+			top: -10px;
+		}
+	}
+	.slider {
+		top: 0;
+	}
+	@media only screen and (min-width:1000px) {
+		min-height: 1500px;	
+	}
+}
+
+
+.project-header {
+	height: 80px;
+	line-height: 80px;
+	text-align: left;
+	@media only screen and (min-width:1000px) {
+		height: 140px;
+		line-height: 140px;
+	}
+}
+
+.details {
+	margin-top: 30px;
+	h3 {
+		margin-bottom: 10px;
+	}
+	.fa {
+		@include padding(0);
+		font-size: 16px;
+		color: $light-gray;
+		background-color: unset;
+		margin-right: 15px;
+	}
+	li {
+		height: 50px;
+		border-bottom:  1px solid #E1E2E2;
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+	span {
+		line-height: 50px;
+	}
+	a {
+		color: $light-gray;
+		&:hover {
+			color: $dark-red;
+		}
+	}
+}
+
+.right {
+	@media only screen and (min-width:1000px) {
+		float: right;
+	}
+}
+
+.related-projects {
+	margin: 0 10px;
+	.col-3 {
+		width: 23.0769%;
+		margin-right: 2.5641%;
+		height: 270px;
+		background-image: url('https://placeholdit.imgix.net/~text?txtsize=33&txt=270%C3%97270&w=270&h=270');
+		border-radius: 5px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		&:hover {
+			background: #90D1CB;
+			& .hide {
+				visibility: visible;
+				transition: visibility .5s ease-in;
+			}
+		}
+	}
+	.hide {
+		@include padding(110px 85px 30px);
+		height: 100%;
+		p {
+			margin-top: 50px;
+			color: $white;
+			font-weight: 600;
+			text-align: center;
+		}
+	}
+}
+
+.data-slick {
+	margin-top: 0;
+	.slick-arrow {
+		position: absolute;
+		top: -80px;
+		right: 0;
+	}
+	.fa-chevron-left {
+		right: 60px;
+	}
+	.slick-slide {
+		width: 270px;
+		margin-right: 15px;
+	}
+}
